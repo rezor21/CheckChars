@@ -6,6 +6,10 @@ namespace TestCheckChars
     [TestClass]
     public class TestChecker
     {
-       
+        [TestMethod]
+        public void TestCheckString()
+        {
+            
+        }
     }
 }
