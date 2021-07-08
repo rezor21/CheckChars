@@ -9,7 +9,9 @@ namespace TestCheckChars
         [TestMethod]
         public void TestCheckString()
         {
-            
+            string testString = "zdanie z ¹";
+
+            Assert.IsTrue(Checker.TestString(testString));
         }
     }
 }
