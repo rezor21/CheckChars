@@ -9,9 +9,14 @@ namespace TestCheckChars
         [TestMethod]
         public void TestCheckStringA()
         {
-            string testString = "zdanie z ¹";
+            string testString = "zdanie z ";
+            char[] polishChars = { '¿', 'Ÿ', 'æ', 'ñ', 'ó', '³', 'ê', '¹', 'œ' };
 
-            Assert.IsTrue(Checker.TestString(testString));
+            foreach(char polishChar in polishChars)
+            {
+                Assert.IsTrue(Checker.TestString(testString + polishChar));
+            }
+
         }
     }
 }

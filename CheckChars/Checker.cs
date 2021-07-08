@@ -14,6 +14,7 @@ namespace CheckChars
             }
 
             return result;
+
         }
     }
 }
