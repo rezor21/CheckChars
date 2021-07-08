@@ -7,7 +7,7 @@ namespace TestCheckChars
     public class TestChecker
     {
         [TestMethod]
-        public void TestCheckString()
+        public void TestCheckStringA()
         {
             string testString = "zdanie z ¹";
 
