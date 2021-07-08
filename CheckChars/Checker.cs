@@ -8,9 +8,14 @@ namespace CheckChars
         {
             bool result = false;
 
-            if (text.Contains('ą'))
+            char[] polishChars = { 'ż', 'ź', 'ć', 'ń', 'ó', 'ł', 'ę', 'ą', 'ś' };
+
+            foreach (char polishChar in polishChars)
             {
-                result = true;
+                if (text.Contains(polishChar))
+                {
+                    result = true;
+                }
             }
 
             return result;
