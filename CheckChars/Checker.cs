@@ -1,25 +1,20 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace CheckChars
 {
     public class Checker
     {
         public static bool TestString(string text)
-        {
-            bool result = false;
+        {            
+            string pattern = "[a-zżźćńółęąś]*";
 
-            char[] polishChars = { 'ż', 'ź', 'ć', 'ń', 'ó', 'ł', 'ę', 'ą', 'ś' };
+            Regex rgx = new Regex(pattern);
 
-            foreach (char polishChar in polishChars)
-            {
-                if (text.Contains(polishChar))
-                {
-                    result = true;
-                }
-            }
+            foreach (Match match in rgx.Matches(text.ToLower()))
+                return true;
 
-            return result;
-
+            return false;
         }
     }
 }
