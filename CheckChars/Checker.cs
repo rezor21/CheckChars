@@ -6,13 +6,16 @@ namespace CheckChars
     public class Checker
     {
         public static bool TestString(string text)
-        {            
-            string pattern = "[a-zżźćńółęąś]*";
+        {
+            char[] polishChars = { 'ż', 'ź', 'ć', 'ń', 'ó', 'ł', 'ę', 'ą', 'ś' };
 
-            Regex rgx = new Regex(pattern);
-
-            foreach (Match match in rgx.Matches(text.ToLower()))
-                return true;
+            foreach (char polishChar in polishChars)
+            {
+                if (text.Contains(polishChar))
+                {
+                    return true;
+                }
+            }
 
             return false;
         }
