@@ -27,5 +27,13 @@ namespace TestCheckChars
                 Assert.IsFalse(Checker.TestString(testString));
         }
 
+        [TestMethod]
+        public void TestCheckStringC()
+        {
+            string testString = "";
+
+            Assert.IsFalse(Checker.TestString(testString));
+        }
+
     }
 }
