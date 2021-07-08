@@ -18,5 +18,14 @@ namespace TestCheckChars
             }
 
         }
+
+        [TestMethod]
+        public void TestCheckStringB()
+        {
+            string testString = "zdanie z a";
+
+                Assert.IsFalse(Checker.TestString(testString));
+        }
+
     }
 }
