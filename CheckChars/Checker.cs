@@ -7,13 +7,10 @@ namespace CheckChars
         public static bool TestString(string text)
         {
             bool result = false;
-            
-            foreach(char myChar in text)
+
+            if (text.Contains('ą'))
             {
-                if(myChar == 'ą')
-                {
-                    result = true;
-                }
+                result = true;
             }
 
             return result;
